@@ -9,3 +9,16 @@
     width: 100%;
   }
 }
+
+@media (max-width: 600px) {
+  .container.fc {
+    background-image: url("/img/bg@600.png");
+  }
+}
+
+
+@media (max-width: 380px) {
+  .container.fc {
+    background-image: url("/img/bg@380.png");
+  }
+}

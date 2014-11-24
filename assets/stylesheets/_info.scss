@@ -1,15 +1,26 @@
 .fc {
   section.info {
-    padding: 100px 180px;
+    padding: 90px 100px;
     .timeline {
       // 分3栏
       [class^='col-'] {
-        margin-right: 10px;
         display: inline-block;
+        vertical-align: top;
         h3.title {
           font-size: $title_size;
           font-weight: bold;
           color: $red;
+        }
+        .tab {
+          display: block;
+          margin-bottom: 28px;
+        }
+        .time {
+          color: white;
+          font-size: 1.3em;
+          p {
+            font-size: inherit;
+          }
         }
       }
     }
@@ -24,7 +35,7 @@
 }
 
 @media (min-width: 961px) {
-  .tk {
+  .fc {
     section.info {
       .timeline {
         float: left;
@@ -39,9 +50,25 @@
 }
 
 @media (max-width: 960px) {
-  .tk {
+  .fc {
     section.info {
       padding: 50px 90px;
+      .timeline {
+        width: 100%;
+        display: block;
+        [class^='col-'] {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 380px) {
+  .fc {
+    section.info {
+      padding: 20px 10%;
       .timeline {
         width: 100%;
         display: block;
