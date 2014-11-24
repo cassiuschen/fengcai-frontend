@@ -5,10 +5,18 @@ html {
 	background-color: #000;
 }
 
+body {
+	margin: 0;
+}
+
 @media (max-width: 960px) {
 	html {
 		font-size: 10px;
 	}
+}
+
+*:before, *:after {
+	box-sizing: border-box;
 }
 
 // 颜色变量
@@ -20,3 +28,4 @@ $title_size: 2em;
 @import 'container';
 @import 'banner';
 @import 'info';
+@import 'button';
