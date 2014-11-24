@@ -31,6 +31,21 @@
     .article {
       display: inline-block;
       max-width: 400px;
+      h1.title {
+        font-size: 2em;
+        color: $red;
+        margin: 0;
+      }
+      .sub_title {
+        margin-top: 10px;
+      }
+      article {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        p {
+          margin: 0;
+        }
+      }
     }
   }
 }
@@ -58,11 +73,6 @@
       .article {
         margin-left: 50px;
         width: 350px;
-        h1.title {
-          font-size: 2em;
-          color: $red;
-          margin: 0;
-        }
       }
     }
   }
@@ -71,13 +81,20 @@
 @media (max-width: 960px) {
   .fc {
     section.info {
+      text-align: center;
       padding: 50px 90px;
       .timeline {
         width: 100%;
         display: block;
         [class^='col-'] {
           width: 30%;
+          .tab {
+            margin: 0 auto;
+          }
         }
+      }
+      .article {
+        margin-top: 40px;
       }
     }
   }
@@ -87,13 +104,20 @@
 @media (max-width: 380px) {
   .fc {
     section.info {
+      text-align: center;
       padding: 20px 10%;
       .timeline {
         width: 100%;
         display: block;
         [class^='col-'] {
           width: 30%;
+          .tab {
+            margin: 0 auto;
+          }
         }
+      }
+      .article {
+        margin-top: 40px;
       }
     }
   }
