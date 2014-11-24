@@ -1,0 +1,54 @@
+.fc {
+  section.info {
+    padding: 100px 180px;
+    .timeline {
+      // 分3栏
+      [class^='col-'] {
+        margin-right: 10px;
+        display: inline-block;
+        h3.title {
+          font-size: $title_size;
+          font-weight: bold;
+          color: $red;
+        }
+      }
+    }
+    .divider {
+      margin-left: 30px;
+      margin-right: 50px;
+    }
+    .article {
+      float: right;
+    }
+  }
+}
+
+@media (min-width: 961px) {
+  .tk {
+    section.info {
+      .timeline {
+        float: left;
+        width: 360px;
+        [class^='col-'] {
+          width: 100px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .tk {
+    section.info {
+      padding: 50px 90px;
+      .timeline {
+        width: 100%;
+        display: block;
+        [class^='col-'] {
+          width: 30%;
+        }
+      }
+    }
+  }
+}

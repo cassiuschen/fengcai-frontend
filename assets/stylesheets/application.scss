@@ -2,5 +2,21 @@ html {
 	margin: 0;
 	padding: 0;
 	font-size: 14px;
-	background-color: #333;
+	background-color: #000;
 }
+
+@media (max-width: 960px) {
+	html {
+		font-size: 10px;
+	}
+}
+
+// 颜色变量
+$red: #e13030;
+
+// 样式变量
+$title_size: 2em;
+
+@import 'container';
+@import 'banner';
+@import 'info';
