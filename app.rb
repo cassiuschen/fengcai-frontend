@@ -13,7 +13,7 @@ require 'slim'
 class FengCaiApp < Sinatra::Base
   # Settings
   set :public_folder, File.dirname(__FILE__) + '/public'
-  set :port, '80'
+  set :port, '8080'
   set :views, :scss => 'assets/stylesheets', :coffee => 'assets/javascripts', :clim => 'views', :default => 'views'
   helpers do
     def find_template(views, name, engine, &block)
