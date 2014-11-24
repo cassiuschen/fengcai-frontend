@@ -1,0 +1,106 @@
+.fc {
+  section.player {
+    margin: 0;
+    padding: 0 !important;
+    vertical-align: top;
+    [class^='col-'] {
+      [class^='player-'] {
+        @include transform(background-position, .28s);
+        width: 480px;
+        height: 480px;
+        //background-size: contain;
+        background-position: 0 -100%;
+        background-image: url('/img/player.jpg');
+      }
+
+      [class^='player-']:hover {
+        @include transform(background-position, .28s);
+        background-position: 0 0;
+
+      }
+    }
+  }
+}
+
+@media (min-width: 961px) {
+  .fc {
+    section.player {
+      vertical-align: top;
+      height: 1200px;
+      min-height: 1200px;
+      [class^='col-'] {
+        width: 480px;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: inline-block;
+        // Group
+        .players {
+          padding: 0;
+          width: 480px;
+          [class^='player-'] {
+            display: inline-block;
+            width: 240px;
+            height: 240px;
+            background-size: 240px 480px;
+          }
+        }
+      }
+      .col-left {
+        float: left;
+      }
+      .col-right {
+        float: right;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .fc {
+    section.player {
+      [class^='col-'] {
+        [class^='player-'] {
+          width: 50%;
+          height: 50%;
+          display: inline-block;
+          background-size: 100% 200%;
+        }
+        .players {
+
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .fc {
+    section.player {
+      [class^='col-'] {
+        [class^='player-'] {
+          width: 480px;
+          height: 480px;
+          //background-size: contain;
+          background-position: 0 -100%;
+        }
+        // Group
+        .players {
+          padding: 0;
+          width: 480px;
+          [class^='player-'] {
+            display: inline-block;
+            width: 240px;
+            height: 240px;
+            background-size: 240px 480px;
+          }
+        }
+        [class^='player-']:hover {
+          @include transform(background-position, .28s);
+          background-position: 0 0;
+
+        }
+      }
+    }
+  }
+}
