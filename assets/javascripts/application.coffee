@@ -4,6 +4,7 @@ window.base =
 		#window.base.DrawToLine()
 		window.base.ResetSquireDivHeight()
 		window.base.ResetInfoDivPosition()
+		window.base.ResetGoBackButtonPosition()
 		window.base.HeadRoom()
 		#$('#info').modal()
 	# Plugin
@@ -58,6 +59,13 @@ window.base =
 			$('[class^="player-"] .info').css("height", 70)
 			$('.players [class^="player-"] .info').css("top", @width / 4 - 20 - 50)
 			$('.players [class^="player-"] .info').css("height", 50)
+	ResetGoBackButtonPosition : () =>
+		@width = $(window).width()
+		if @width >= 960
+			$('.goBack').css("height", @width / 4)
+			$('.goBack').css("width", @width / 4)
+		else
+			console.log "You Don't Need To Reset!!!! HAAAAAAAAAAAAAA!!!!!"
 
 
 $(document).ready ->
@@ -67,3 +75,4 @@ $(document).ready ->
 window.onresize = ->
 	window.base.ResetSquireDivHeight()
 	window.base.ResetInfoDivPosition()
+	window.base.ResetGoBackButtonPosition()
