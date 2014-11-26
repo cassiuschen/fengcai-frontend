@@ -4,6 +4,18 @@ window.base =
 		#window.base.DrawToLine()
 		window.base.ResetSquireDivHeight()
 		window.base.ResetInfoDivPosition()
+		window.base.HeadRoom()
+		#$('#info').modal()
+	# Plugin
+	HeadRoom : () ->
+		console.log "headroom"
+		$('.headroom').headroom
+			"offset": 200
+			"tolerance": 5
+			"classess":
+				"initial": "animated"
+				"pinned": "slideDown"
+				"unpinned": "slideUp"
 	# Canvas
 	DrawTab : () ->
 		tabs = $('canvas.tab')
@@ -31,8 +43,8 @@ window.base =
 			$('[class^="player-"]').css("height", @width)
 		#$('.players [class^="player-"]').css("height", $('[class^="player-"]').width())
 		if @width > 960
-			$('[class^="player-"]').css("height", 480)
-			$('.players [class^="player-"]').css("height", 240)
+			$('[class^="player-"]').css("height", @width / 2)
+			$('.players [class^="player-"]').css("height", @width / 4)
 	ResetInfoDivPosition : () ->
 		@width = $(window).width()
 		if @width <= 960 && @width > 480

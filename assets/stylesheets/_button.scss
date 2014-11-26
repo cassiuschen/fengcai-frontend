@@ -16,14 +16,36 @@
 	box-shadow: 0 0 0 $red;
 }
 
-.fc.btn:hover {
+.fc.btn.white-o {
+	color: white;
+	border: 2px solid white;
+	box-shadow: 0 0 0 white;
+}
+
+.fc.btn.red-o:hover {
 	@include transform(box-shadow, .28s);
 	box-shadow: 0 0 5px lighten($red, 10%);
 	cursor: pointer;
 }
 
-.fc.btn:active {
+.fc.btn.red-o:active {
 	@include transform(box-shadow, .18s);
 	box-shadow: 0 0 15px lighten($red, 25%);
+	cursor: pointer;
+}
+
+.fc.btn.white-o:hover {
+	@include transform(color, .18s);
+	@include transform(border, .08s);
+	border: 2px solid $light_red;
+	color: $light_red;
+	cursor: pointer;
+}
+
+.fc.btn.white-o:active {
+	@include transform(color, .18s);
+	@include transform(border, .18s);
+	border: 2px solid lighten($light_red, 10%);
+	color: lighten($light_red, 10%);
 	cursor: pointer;
 }

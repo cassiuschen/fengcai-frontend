@@ -1,5 +1,5 @@
-section.banner
-  //img src="/img/banner.jpg"
+section.banner.headroom
+  img src="/img/banner.jpg"
 .container.fc
   section.player
     .col-left
@@ -50,3 +50,23 @@ section.banner
             .sum 2542
         .goBack
           a.btn.fc.red-o 返回首页
+
+#info.modal.fc.fade.in tabindex="-1" role="dialog" aria-hidden="false"
+  .modal-dialog
+    .modal-content
+      .actions
+        .close
+        .renren
+        .weibo
+        .cucxsh
+      .picture
+        img src="/img/player_cap.jpg"
+      .info_area
+        .title
+          h3 Player
+          | 2014fafdgjkllu
+        p
+          | B/S结构（Browser/Server，浏览器/服务器模式），是WEB兴起后的一种网络结构模式，WEB浏览器是客户端最主要的应用软件。这种模式统一了客户端，将系统功能实现的核心部分集中到服务器上，简化了系统的开发、维护和使用。客户机上只要安装一...
+      .vote
+        a.btn.fc.white-o VoteMe
+      

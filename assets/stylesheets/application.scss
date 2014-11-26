@@ -1,25 +1,25 @@
 html {
-	margin: 0;
-	padding: 0;
-	font-size: 14px;
-	background-color: #000;
-	color: white;
-	background-image: url("/img/bg.png");
-	background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background-color: #000;
+  color: white;
+  background-image: url("/img/bg.png");
+  background-repeat: repeat;
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
 @media (max-width: 960px) {
-	html {
-		font-size: 10px;
-	}
+  html {
+    font-size: 10px;
+  }
 }
 
 *:before, *:after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 // 颜色变量
@@ -35,3 +35,84 @@ $title_size: 2em;
 //@import 'info';
 @import 'player';
 @import 'button';
+@import 'bs_modal';
+@import 'modal';
+
+.headroom--unpinned {
+  @include transform(top, .5s);
+  top: -280px;
+}
+
+.headroom--top {
+  @include transform(top, .5s);
+  top: 0;
+}
+@media (min-width: 1280px) {
+  body {
+    margin-top: 360px;
+  }
+  .headroom--unpinned {
+    @include transform(top, .5s);
+    top: -560px !important;
+  }
+  .headroom--pinned {
+    @include transform(top, .5s);
+    top: -500px !important;
+  }
+  .headroom--top.headroom--pinned {
+    @include transform(top, .5s);
+    top: 0 !important;
+  }
+}
+@media (max-width: 1280px) {
+  .headroom--unpinned {
+    @include transform(top, .5s);
+    top: -340px !important;
+  }
+  .headroom--pinned {
+    @include transform(top, .5s);
+    top: -500px !important;
+  }
+  body {
+    margin-top: 280px;
+  }
+  .headroom--top.headroom--pinned {
+    @include transform(top, .5s);
+    top: 0 !important;
+  }
+}
+
+@media (max-width: 960px) {
+  body {
+    margin-top: 280px;
+  }
+  .headroom--unpinned {
+    @include transform(top, .5s);
+    top: -270px !important;
+  }
+  .headroom--pinned {
+    @include transform(top, .5s);
+    top: -230px !important;
+  }
+  .headroom--top.headroom--pinned {
+    @include transform(top, .5s);
+    top: 0 !important;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    margin-top: 180px;
+  }
+  .headroom--unpinned {
+    @include transform(top, .5s);
+    top: -170px !important;
+  }
+  .headroom--pinned {
+    @include transform(top, .5s);
+    top: -140px !important;
+  }
+  .headroom--top.headroom--pinned {
+    @include transform(top, .5s);
+    top: 0 !important;
+  }
+}
