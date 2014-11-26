@@ -31,6 +31,22 @@
         margin: 0;
       }
     }
+    .actions {
+      float: left;
+      padding-top: 20px;
+      padding-left: 50px;
+      z-index: 9000;
+      a {
+        @include transform(opacity, .28s);
+        height: 20px;
+        display: inline-block;
+        width: 20px;
+        background-color: transparent;
+        opacity: 0.4;
+        margin-right: 5px;
+        background-position: 0 0;
+      }
+    }
   }
 }
 
@@ -75,5 +91,44 @@
       width: 600px;
       height: 320px;
     }
+  }
+}
+
+.close {
+  background-image: url("/img/back_button.png");
+  background-size: cover;
+  &:hover, &:active {
+    @include transform(opacity, .28s);
+    opacity: 1 !important;
+  }
+}
+
+.renren {
+  background-image: url("/img/share-renren.png");
+  background-size: 100% 200%;
+  &:hover, &:active {
+    @include transform(opacity, .28s);
+    opacity: 1 !important;
+    background-position: 0 -100% !important;
+  }
+}
+
+.weibo {
+  background-image: url("/img/share-sina.png");
+  background-size: 100% 200%;
+  &:hover, &:active {
+    @include transform(opacity, .28s);
+    opacity: 1 !important;
+    background-position: 0 -100% !important;
+  }
+}
+
+.cucxsh {
+  background-image: url("/img/homepage.png");
+  background-size: 100% 200%;
+  &:hover, &:active {
+    @include transform(opacity, .28s);
+    opacity: 1 !important;
+    background-position: 0 -100% !important;
   }
 }

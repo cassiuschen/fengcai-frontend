@@ -7,7 +7,10 @@ window.base =
 		window.base.ResetGoBackButtonPosition()
 		window.base.HeadRoom()
 		window.base.ChangeBackground()
+		window.base.ShowModal()
 		window.base.ClickToShowModal()
+		window.base.ClicktoHideModal()
+
 	# Plugin
 	HeadRoom : () ->
 		console.log "headroom"
@@ -37,8 +40,11 @@ window.base =
 			ctx.stroke()
 	# Modal
 	ClickToShowModal : () ->
-		$("[class^='player-").on 'click', ->
+		$("[class^='player-").click ->
 			window.base.ShowModal()
+	ClicktoHideModal : () ->
+		$('#closeModal').on 'click', ->
+			$('.modal').modal("hide")
 	ShowModal : () ->
 		$('#info').modal()
 
