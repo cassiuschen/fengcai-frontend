@@ -5,53 +5,73 @@ section.banner.headroom
     .col-left
       .player-1 data-jden="Player1" ontouchstart="window.mobile.TouchToShowModal();"
         .info
-          .name 选手1
-          .sum 123
+          .name
+            | {{name}}
+          .sum
+            | {{sum}}
       group.players
         .player-2 data-jden="Player2" ontouchstart="window.mobile.TouchToShowModal();"
           .info
-            .name 选手2
-            .sum 124
+            .name
+              | {{name}}
+            .sum
+              | {{sum}}
         .player-3 data-jden="Player3" ontouchstart="window.mobile.TouchToShowModal();"
           .info
-            .name 选手3
-            .sum 125
+            .name
+              | {{name}}
+            .sum
+              | {{sum}}
       .player-4 data-jden="Player4" ontouchstart="window.mobile.TouchToShowModal();"
         .info
-          .name 选手4
-          .sum 152
+          .name
+            | {{name}}
+          .sum
+            | {{sum}}
     .col-right
       group.players
         .player-5 data-jden="Player5" ontouchstart="window.mobile.TouchToShowModal();"
           .info
-            .name 选手5
-            .sum 987
+            .name
+              | {{name}}
+            .sum
+              | {{sum}}
         .player-6 data-jden="Player6" ontouchstart="window.mobile.TouchToShowModal();"
           .info
-            .name 选手6
-            .sum 755
+            .name
+              | {{name}}
+            .sum
+              | {{sum}}
       .player-7 data-jden="Player7" ontouchstart="window.mobile.TouchToShowModal();"
         .info
-          .name 选手7
-          .sum 212
+          .name
+            | {{name}}
+          .sum
+            | {{sum}}
       group.players
         .player-8 data-jden="Player8" ontouchstart="window.mobile.TouchToShowModal();"
           .info
-            .name 选手8
-            .sum 987
+            .name
+              | {{name}}
+            .sum
+              | {{sum}}
         .player-9 data-jden="Player9" ontouchstart="window.mobile.TouchToShowModal();"
           .info
-            .name 选手9
-            .sum 354
+            .name
+              | {{name}}
+            .sum
+              | {{sum}}
       group.players
         .player-10 data-jden="Player10" ontouchstart="window.mobile.TouchToShowModal();" 
           .info
-            .name 选手10
-            .sum 2542
+            .name
+              | {{name}}
+            .sum 
+              | {{sum}}
         .goBack
           a.btn.fc.red-o 返回首页
 
-#info.modal.fc.fade.in tabindex="-1" role="dialog" aria-hidden="false"
+#info.modal.fc.fade.in tabindex="-1" role="dialog" aria-hidden="true"
   .modal-dialog
     .modal-content
       .actions

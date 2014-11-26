@@ -52,8 +52,6 @@ window.data =
 
 window.base =
 	Init : () ->
-		#window.base.DrawTab()
-		#window.base.DrawToLine()
 		window.base.ResetSquireDivHeight()
 		window.base.ResetInfoDivPosition()
 		window.base.ResetGoBackButtonPosition()
@@ -119,10 +117,10 @@ window.base =
 	ChangeBackground : () ->
 		$('.modal').on 'show.bs.modal', () ->
 			$('section').addClass 'blur'
-			$('.headroom').headroom("destroy")
+			#$('.headroom').headroom("destroy")
 		$('.modal').on 'hide.bs.modal', () ->
 			$('section').removeClass 'blur'
-			$('.headroom').headroom()
+			#window.base.HeadRoom()
 
 	# Reseter
 	ResetSquireDivHeight : () ->
@@ -155,6 +153,7 @@ window.base =
 			$('.goBack').css("height", @width / 4)
 			$('.goBack').css("width", @width / 4)
 		else
+			$(".goBack").attr "style", ""
 			console.log "You Don't Need To Reset!!!! HAAAAAAAAAAAAAA!!!!!"
 # For Mobile Drivers
 window.mobile =
