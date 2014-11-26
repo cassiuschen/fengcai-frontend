@@ -162,7 +162,8 @@ window.mobile =
 		window.mobile.TapToHideModal()
 	# Modal
 	TapToShowModal : () ->
-		window.base.ShowModal()
+		rawData = $(this).data "jden"
+		window.base.ShowModal(rawData)
 
 	TapToHideModal : () ->
 		$('.modal').modal("hide")
