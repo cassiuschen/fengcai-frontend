@@ -1,6 +1,7 @@
 /*
 *    Javascript For FengCai 2014
 *    Version: 1.0-alpha
+*
 *    Code by Cassius Chen
 *    Using CoffeeScript
 */
