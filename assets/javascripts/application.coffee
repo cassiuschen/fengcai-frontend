@@ -101,7 +101,7 @@ window.base =
 		$('#pDetail').html params.detail
 
 	ClickToShowModal : () ->
-		$("[class^='player-").click ->
+		$("[class^='player-']").click ->
 			rawData = $(this).data "jden"
 			window.base.ShowModal(rawData)
 
@@ -162,11 +162,13 @@ window.mobile =
 		window.mobile.TapToHideModal()
 	# Modal
 	TapToShowModal : () ->
-		rawData = $(this).data "jden"
-		window.base.ShowModal(rawData)
+		$("[class^='player-']").hammer().bind "tap", ->
+			rawData = $(this).data "jden"
+			window.base.ShowModal(rawData)
 
 	TapToHideModal : () ->
-		$('.modal').modal("hide")
+		$("#closeModal").hammer().bind "tap", ->
+			$('.modal').modal("hide")
 
 # Fastclient
 $ ->
