@@ -1,10 +1,3 @@
-/*
-*    Javascript For FengCai 2014
-*    Version: 1.0-alpha
-*
-*    Code by Cassius Chen
-*    Using CoffeeScript
-*/
 (function() {
   window.data = {
     Player1: {
@@ -131,7 +124,7 @@
       return $('#pDetail').html(params.detail);
     },
     ClickToShowModal: function() {
-      return $("[class^='player-").click(function() {
+      return $("[class^='player-']").click(function() {
         var rawData;
         rawData = $(this).data("jden");
         return window.base.ShowModal(rawData);
@@ -205,12 +198,16 @@
       return window.mobile.TapToHideModal();
     },
     TapToShowModal: function() {
-      var rawData;
-      rawData = $(this).data("jden");
-      return window.base.ShowModal(rawData);
+      return $("[class^='player-']").hammer().bind("tap", function() {
+        var rawData;
+        rawData = $(this).data("jden");
+        return window.base.ShowModal(rawData);
+      });
     },
     TapToHideModal: function() {
-      return $('.modal').modal("hide");
+      return $("#closeModal").hammer().bind("tap", function() {
+        return $('.modal').modal("hide");
+      });
     }
   };
 
