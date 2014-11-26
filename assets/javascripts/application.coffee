@@ -6,7 +6,8 @@ window.base =
 		window.base.ResetInfoDivPosition()
 		window.base.ResetGoBackButtonPosition()
 		window.base.HeadRoom()
-		#$('#info').modal()
+		window.base.ChangeBackground()
+		window.base.ShowModal()
 	# Plugin
 	HeadRoom : () ->
 		console.log "headroom"
@@ -34,7 +35,19 @@ window.base =
 			ctx.moveTo 0,30
 			ctx.lineTo 20,0
 			ctx.stroke()
-	# Player
+	# Modal
+	ShowModal : () ->
+		$('#info').modal()
+
+	ChangeBackground : () ->
+		$('.modal').on 'show.bs.modal', () ->
+			$('section').addClass 'blur'
+			$('.headroom').headroom("destroy")
+		$('.modal').on 'hide.bs.modal', () ->
+			$('section').removeClass 'blur'
+			$('.headroom').headroom()
+
+	# Reseter
 	ResetSquireDivHeight : () ->
 		@width = $(window).width()
 		#console.log "Resizing...#{@width}px"
@@ -67,7 +80,7 @@ window.base =
 		else
 			console.log "You Don't Need To Reset!!!! HAAAAAAAAAAAAAA!!!!!"
 
-
+#window.base.ChangeBackground()
 $(document).ready ->
 	window.base.Init()
 	return

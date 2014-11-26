@@ -11,7 +11,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1040;
+  z-index: 8040;
   -webkit-overflow-scrolling: touch;
 
   // Prevent Chrome on Windows from adding a focus outline. For details, see
@@ -43,7 +43,7 @@
   top: 0;
   right: 0;
   left: 0;
-  background-color: #eee;
+  background-color: #333;
 }
   // Fade for backdrop
 .modal-backdrop.fade { @include opacity(0); }
