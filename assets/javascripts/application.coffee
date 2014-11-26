@@ -168,6 +168,9 @@ window.mobile =
 	TapToHideModal : () ->
 		$('.modal').modal("hide")
 
+# Fastclient
+$ ->
+    FastClick.attach document.body
 #window.base.ChangeBackground()
 $(document).ready ->
 	window.base.Init()
