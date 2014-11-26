@@ -54,9 +54,9 @@ window.base =
 			$('[class^="player-"] .info').css("top", @width - 20 - 70)
 			$('[class^="player-"] .info').css("height", 70)
 		if @width > 960
-			$('[class^="player-"] .info').css("top", 350)
+			$('[class^="player-"] .info').css("top", @width / 2 - 20 - 70)
 			$('[class^="player-"] .info').css("height", 70)
-			$('.players [class^="player-"] .info').css("top", 160)
+			$('.players [class^="player-"] .info').css("top", @width / 4 - 20 - 50)
 			$('.players [class^="player-"] .info').css("height", 50)
 
 
