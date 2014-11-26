@@ -3,48 +3,48 @@ section.banner.headroom
 .container.fc
   section.player
     .col-left
-      .player-1
+      .player-1 data-jden="Player1" ontouchstart="window.mobile.TouchToShowModal();"
         .info
           .name 选手1
           .sum 123
       group.players
-        .player-2
+        .player-2 data-jden="Player2" ontouchstart="window.mobile.TouchToShowModal();"
           .info
             .name 选手2
             .sum 124
-        .player-3
+        .player-3 data-jden="Player3" ontouchstart="window.mobile.TouchToShowModal();"
           .info
             .name 选手3
             .sum 125
-      .player-4
+      .player-4 data-jden="Player4" ontouchstart="window.mobile.TouchToShowModal();"
         .info
           .name 选手4
           .sum 152
     .col-right
       group.players
-        .player-5
+        .player-5 data-jden="Player5" ontouchstart="window.mobile.TouchToShowModal();"
           .info
             .name 选手5
             .sum 987
-        .player-6
+        .player-6 data-jden="Player6" ontouchstart="window.mobile.TouchToShowModal();"
           .info
             .name 选手6
             .sum 755
-      .player-7
+      .player-7 data-jden="Player7" ontouchstart="window.mobile.TouchToShowModal();"
         .info
           .name 选手7
           .sum 212
       group.players
-        .player-8
+        .player-8 data-jden="Player8" ontouchstart="window.mobile.TouchToShowModal();"
           .info
             .name 选手8
             .sum 987
-        .player-9
+        .player-9 data-jden="Player9" ontouchstart="window.mobile.TouchToShowModal();"
           .info
             .name 选手9
             .sum 354
       group.players
-        .player-10
+        .player-10 data-jden="Player10" ontouchstart="window.mobile.TouchToShowModal();" 
           .info
             .name 选手10
             .sum 2542
@@ -55,17 +55,17 @@ section.banner.headroom
   .modal-dialog
     .modal-content
       .actions
-        a.close#closeModal
+        a.close#closeModal ontouchstart="window.mobile.TouchToHideModal();"
         a.renren 
         a.weibo 
         a.cucxsh 
       .picture
-        img src="/img/player_cap.jpg"
+        img#pImg src="/img/player_cap.jpg"
       .info_area
         .title
-          h3 Player
-          | 2014fafdgjkllu
-        p
+          h3#pName Player
+          span#pBrief 2014fafdgjkllu
+        p#pDetail
           | B/S结构（Browser/Server，浏览器/服务器模式），是WEB兴起后的一种网络结构模式，WEB浏览器是客户端最主要的应用软件。这种模式统一了客户端，将系统功能实现的核心部分集中到服务器上，简化了系统的开发、维护和使用。客户机上只要安装一...
       .vote
         a.btn.fc.white-o VoteMe
